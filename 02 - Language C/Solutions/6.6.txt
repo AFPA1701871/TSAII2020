@@ -1,0 +1,20 @@
+Le programme rempli un tableau en remplissant les cases à l'aide la somme des 2 cases précédantes
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int suite[8];
+    int i;
+    suite[0]=1;
+    suite[1]=1;
+    printf("%d |",suite[0]);
+    printf("%d |",suite[1]);
+    for (i=2; i<8; i++)
+    {
+        suite[i]=suite[i-1]+suite[i-2];
+        printf("%d |",suite[i]);
+    }
+    return 0;
+}

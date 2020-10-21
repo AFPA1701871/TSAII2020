@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1593438385 source:u:\grp-71\reference\02 - language c\exemples\tri_biulles\main.c
+	<stdio.h>
+	<stdlib.h>
+	<stdbool.h>
+	<math.h>
+	<time.h>
+

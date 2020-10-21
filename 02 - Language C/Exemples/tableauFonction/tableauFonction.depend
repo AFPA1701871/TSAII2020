@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1593097500 source:u:\grp-71\reference\02 - language c\exemples\tableaufonction\main.c
+	<stdio.h>
+	<stdlib.h>
+

@@ -1,0 +1,18 @@
+Le programme range les nombres impairs dans un tableau et l'affiche
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n[7];
+    int i,k;
+    n[0]=1;
+    printf("%d |",n[0]);
+    for (k=1; k<=6; k++)
+    {
+        n[k]=n[k-1]+2;
+        printf("%d |",n[k]);
+    }
+    return 0;
+}

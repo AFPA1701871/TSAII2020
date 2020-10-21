@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a,b,c;
+    int*p1,*p2,*p3;
+    p1=&a;
+    p2=&b;
+    p3=&c;
+
+    printf("donnez moi une valeur  : ");
+    scanf("%d",p1);
+    printf("donnez moi une valeur : ");
+    scanf("%d",p2);
+    *p3=*p1;
+    *p1=*p2;
+    *p2=*p3;
+
+    printf("les deux valeur sont %d %d: ",*p1,*p2 );
+
+    return 0;
+}

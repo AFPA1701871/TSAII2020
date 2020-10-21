@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main(int argc, char *argv[])
+
+{
+    int nombre = 0; // on initialise la variable a 0
+
+    printf("Ecrire un nombre: ");
+    scanf ("%d",&nombre); // on demande d'entrer un nombre
+    printf ("Le calcul du nombre au carre est de : %f", pow(nombre,2));
+    return 0;
+}

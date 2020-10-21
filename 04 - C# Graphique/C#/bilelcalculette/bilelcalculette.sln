@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29123.88
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bilelcalculette", "bilelcalculette\bilelcalculette.csproj", "{DAD84AE3-0654-4776-A174-A8FAC7DE1028}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DAD84AE3-0654-4776-A174-A8FAC7DE1028}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAD84AE3-0654-4776-A174-A8FAC7DE1028}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAD84AE3-0654-4776-A174-A8FAC7DE1028}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAD84AE3-0654-4776-A174-A8FAC7DE1028}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {22418E40-BF35-472C-91B0-C8DEBCAD508B}
+	EndGlobalSection
+EndGlobal

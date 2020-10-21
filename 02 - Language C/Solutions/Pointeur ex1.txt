@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    //declaration des variables
+    int a,b,mult;
+    //declaration des pointeurs
+    int *p1, *p2,*pMult;
+    //affectation des variables aux pointeurs
+    p1=&a;
+    p2=&b;
+    pMult=&mult;
+    //affectation des valeurs aux variables en passant par les pointeurs
+    *p1=1;
+    *p2=3;
+    *pMult=*p1**p2;
+    //affichage
+    printf("%d",*pMult);
+    return 0;
+}

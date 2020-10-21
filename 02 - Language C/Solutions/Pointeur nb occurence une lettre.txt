@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    char a[50]="                         "; // pour eviter un caractere special dans le tableau
+    char b;
+    int nb=0; //nb d'occurrence
+    int i=0;
+
+
+    printf("entrer un mot: \n");
+    scanf("%s",a);
+
+    printf("entrer une lettre: \n");
+    scanf("%s",&b);
+
+    do
+    {
+        if (b==a[i])
+        {
+            nb+=1; //on ajoute une occurence
+        }
+        i=i+1;
+    }
+    while(a[i]!='\0'); //on s'arrete quand on est à la fin du mot
+    printf("%d",nb);
+
+    return 0;
+}

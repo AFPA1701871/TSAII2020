@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1593591408 source:u:\59011-71-04\tsaii_clement\langage c\nombre d'occurences\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1593599814 source:u:\grp-71\reference\02 - language c\solutions\nombre d'occurences\main.c
+	<stdio.h>
+	<stdlib.h>
+

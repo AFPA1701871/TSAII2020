@@ -1,0 +1,43 @@
+1. Toutes les blesses (noms et prenoms ) à la bataille de Pepingen
+SELECT soldats.nom_soldat, soldats.prenom_soldat
+FROM `blesses` 
+INNER JOIN batailles on batailles.idBataille=blesses.idBataille
+INNER JOIN soldats ON soldats.idSoldat=blesses.idSoldat
+WHERE batailles.lieu_bataille="pepingen"
+
+
+2. Le nombre de fractures à la bataille Pepingen
+SELECT count(blesses.idSoldat)
+FROM `blesses` 
+INNER JOIN batailles on batailles.idBataille=blesses.idBataille
+INNER JOIN blessures ON blessures.idblessure=blesses.idblessure
+WHERE batailles.lieu_bataille="pepingen"
+AND blessures.type_blessure="Fracture"
+
+3. La moyenne des types de blessures par bataille
+SELECT batailles.lieu_bataille, blessures.type_blessure,AVG(blesses.idSoldat)
+FROM `blesses` 
+INNER JOIN batailles on batailles.idBataille=blesses.idBataille
+INNER JOIN blessures ON blessures.idblessure=blesses.idblessure
+GROUP BY  batailles.lieu_bataille, blessures.type_blessure
+
+4. Le nombre de soldat par grade
+SELECT grades.libelle_grade,count(idSoldat) as "nombre de soldat"
+From promotions
+INNER Join grades on grades.idGrade=promotions.idGrade
+GROUP By grades.libelle_grade
+
+5. Les types de blessures par grade
+SELECT
+    libelle_grade,
+    blessures.type_blessure,
+    count(blesses.idBlesse)
+FROM
+    soldats
+    
+INNER JOIN blesses ON soldats.idSoldat=blesses.idSoldat    
+INNER JOIN blessures ON blessures.idblessure=blesses.idblessure 
+INNER JOIN promotions ON promotions.idSoldat=soldats.idSoldat
+INNER Join grades on grades.idGrade=promotions.idGrade 
+
+GROUP BY libelle_grade,blessures.type_blessure

@@ -1,0 +1,70 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* Prototypes */
+void remplirTableau(int* tab,int taille);
+void afficherTableau(int* tab,int taille);
+int demanderNombre(char* texte);
+
+/*programme principal*/
+int main()
+{
+    int i;
+    //demander la taille du tableau
+    int tailleTableau = demanderNombre("Entrer la taille du tableau : ");
+    //déclarer les tableaux
+    int tab1[tailleTableau],tab2[tailleTableau],tabSomme[tailleTableau];
+    //remplit les tableaux
+    printf("Entrer les valeurs du 1er tableau\n");
+    remplirTableau(tab1,tailleTableau);
+        printf("Entrer les valeurs du 2eme tableau\n");
+    remplirTableau(tab2,tailleTableau);
+    //faire la somme des tableaux
+    for (i=0; i<tailleTableau; i++)
+    {
+        tabSomme[i]=tab1[i]+tab2[i];
+    }
+
+    //afficher les tableaux
+    printf("\n Tab 1 : ");
+    afficherTableau(tab1,tailleTableau);
+    printf("\n Tab 2 : ");
+    afficherTableau(tab2,tailleTableau);
+    printf("\n Tab Somme : ");
+    afficherTableau(tabSomme,tailleTableau);
+    return 0;
+}
+
+/* fonctions*/
+int demanderNombre(char* texte)
+{
+    int nb;
+    int retour;
+    do
+    {
+        fflush(stdin); //on vide les caratères dans le buffer d'entrée du clavier
+        printf(texte);
+        retour=scanf("%d",&nb); // on recupere le retour du scanf pour savoir si l'utilisateur a saisi ce que l'on attendait
+        //sinon, on boucle
+    }
+    while(retour==0);
+    return nb;
+}
+
+void remplirTableau(int* tab,int taille)
+{
+    int i;
+    for (i=0; i<taille; i++)
+    {
+        tab[i]=demanderNombre("Entrer une valeur ");
+    }
+}
+
+void afficherTableau(int* tab,int taille)
+{
+    int i;
+    for(i=0; i<taille; i++)
+    {
+        printf("%d |",tab[i]);
+    }
+}

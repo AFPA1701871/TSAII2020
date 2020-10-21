@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    fflush(stdin);
+    int nombre1=0,nombre2=0;
+    printf(" donne moi un nombre : \n");
+    scanf("%d",&nombre1);
+
+    printf("donne moi encore un nombre : \n");
+    scanf("%d",&nombre2);
+
+   /* if((nombre1>0 && nombre2>0) || (nombre1<0 && nombre2<0))
+    {
+        printf(" le produit est positif ");
+    }
+    else
+    {
+        if((nombre1==0) || (nombre2==0))
+        {
+            printf(" le produit est nul ");
+        }
+        else
+        {
+            printf("le produit est negatif ");
+        }
+    }*/
+    
+    if( nombre1<0 xor nombre2<0)
+    {
+        printf(" le produit est négatif ");
+    }
+    else
+    {
+        if((nombre1==0) || (nombre2==0))
+        {
+            printf(" le produit est nul ");
+        }
+        else
+        {
+            printf("le produit est positif ");
+        }
+    }
+    return 0;
+}

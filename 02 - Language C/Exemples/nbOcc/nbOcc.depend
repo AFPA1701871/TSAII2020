@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1593602301 source:u:\grp-71\reference\02 - language c\exemples\nbocc\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

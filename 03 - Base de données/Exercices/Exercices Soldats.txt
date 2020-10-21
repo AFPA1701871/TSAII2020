@@ -1,0 +1,5 @@
+1. Toutes les blesses (noms et prenoms ) à la bataille de Pepingen
+2. Le nombre de fractures à la bataille Pepingen
+3. La moyenne des types de blessures par bataille
+4. Le nombre de soldat par grade
+5. Les types de blessures par grade

@@ -1,0 +1,44 @@
+executer les 2 instructions suivantes sur la base
+ALTER TABLE commandes ADD cde_total int;
+UPDATE commandes SET cde_total = quantiteCommande * (select prixArticle from articles where articles.idArticle = commandes.idArticle)
+
+Affichez le contenu de la table commande. Qu''y a-t-il de changé dans cette table ? Comment le total de la
+commande a-t-il été calculé ? 
+
+Ecrire des requêtes SELECT. Vous vérifierez que le résultat de la requête correspond à votre inspection des
+tables correspondantes. 
+A)Afficher le montant le plus élevé de commande.
+	SELECT max(`cde_total`) as montant FROM `commandes`
+	SELECT max(c.quantiteCommande*a.prixArticle) as montant FROM `commandes` as c, articles as a  WHERE c.idArticle = a.idArticle
+B) Afficher le montant moyen des commandes.
+	SELECT avg(`cde_total`) as `montant moyen` FROM `commandes`
+	SELECT avg(c.quantiteCommande*a.prixArticle) as `montant moyen` FROM `commandes` as c, articles as a WHERE c.idArticle = a.idArticle
+C) Afficher le montant le plus bas de commande.
+	SELECT min(`cde_total`) as `montant le plus bas` FROM `commandes`
+	SELECT min(c.quantiteCommande*a.prixArticle) as `montant le plus bas` FROM `commandes` as c, articles as a WHERE c.idArticle = a.idArticle
+D) Afficher le nombre de commandes qui ont été passées.
+	SELECT COUNT(*) from commandes
+E) Afficher le montant moyen de commande par client
+	SELECT `idClient`, ROUND( AVG(`cde_total`)) as "montant moyen de commande" FROM commandes GROUP BY `idClient`
+F) Afficher le montant le plus élevé de commande par client.
+	SELECT `idClient`, MAX(`cde_total`) FROM commandes GROUP BY `idClient`
+G) Afficher le nombre de commandes par client.
+	SELECT `idClient`, COUNT(*) FROM commandes GROUP BY `idClient`
+H) Afficher le nombre d ''articles commandés en moyenne par client
+	SELECT `idClient`, ROUND( AVG(`quantiteCommande`)) as "quantité moyenne de commande" FROM commandes GROUP BY `idClient`
+I) Afficher le nombre d''articles commandés en moyenne par article.
+	SELECT `idArticle`, ROUND( AVG(`quantiteCommande`)) as "quantité moyenne de commande" FROM commandes GROUP BY `idArticle`
+J) Afficher le nombre total d''articles commandés par article.
+	SELECT `idArticle`, SUM(`quantiteCommande`) FROM commandes GROUP BY `idArticle`
+K) Afficher le nombre moyen d''articles par client et par date.
+	SELECT `idClient`, dateCommande, ROUND( AVG(`quantiteCommande`)) as "quantité moyenne de commande" FROM commandes GROUP BY `idClient`, dateCommande
+L) Afficher le nombre de commandes par jour.
+	SELECT dateCommande, count(*) as "nb de commande" FROM commandes GROUP BY  dateCommande
+M) Afficher le nombre de clients dans la table.
+	SELECT Count(*) as "nombre de clients" FROM Clients
+N) Afficher le nombre de clients différents qui ont passé commande.
+	SELECT Count(Distinct idClient) as "nb de clients ayant commandés" from commandes
+O) Afficher le nombre d'' articles différents qui ont été commandés.
+	SELECT Count(Distinct idArticle) as "nb d'articles commandés" from commandes
+P) Afficher le nombre de jours différents de commandes
+	SELECT Count(Distinct dateCommande) as "nb de dates de commandes" from commandes

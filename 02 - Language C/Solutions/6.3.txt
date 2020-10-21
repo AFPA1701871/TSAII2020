@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+     int i ;
+    int note[9];
+
+
+
+    //Remplissage du tableau note
+    for (i=0; i<9; i++)
+    {
+        printf("\nentrer une valeur");
+        scanf("%d",&note[i]);
+    }
+
+    //Affichage du tableau note
+    for(i=0; i<9; i++)
+    {
+        printf("%d | ",note[i]);
+    }
+    return 0;
+}

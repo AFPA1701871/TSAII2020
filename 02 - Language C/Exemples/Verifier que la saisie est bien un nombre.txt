@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+#include <stdbool.h>
+int main()
+{
+    int age ;
+    char genre[4];
+
+
+    do
+    {
+        fflush(stdin);
+        printf("Quel est votre age ?");
+        scanf("%d",&age);
+        printf("%d\n",age);
+    }
+    while( isalpha(age)==false);
+
+
+    return 0;
+}
+
+

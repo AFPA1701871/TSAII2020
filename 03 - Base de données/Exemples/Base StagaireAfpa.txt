@@ -1,0 +1,34 @@
+-- Créer la base */
+
+CREATE DATABASE stagiaireAfpa;
+USE stagiaireAfpa;
+
+-- Créer la table hebergement*/
+CREATE TABLE hebergement 
+(
+    id_hebergement int(11) NOT NULL AUTO_INCREMENT PRIMARY Key,
+    libelleHebergement VARCHAR(50)
+)ENGINE innoDB;
+
+CREATE TABLE Stagiaire(
+    id_Stagiaire INT(11) NOT NULL AUTO_INCREMENT PRIMARY key,
+    NomSTagiaire VARCHAR(50),
+    prenomStagiaire VARCHAR(50),
+    id_hebergement INT(11),
+    idFormation INT(11)
+) ENGINE innoDB;
+
+
+CREATE TABLE formation(
+    idFormation INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    libelleFormation VARCHAR(50),
+    idGroupe INT(11)
+)ENGINE innoDB;
+
+CREATE TABLE groupe(
+    id_Groupe INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    libelleGroupe VARCHAR(50)
+)ENGINE innoDB;
+
+-- ajout liaison table stagiaire / hebergement
+ALTER TABLE stagiaire ADD CONSTRAINT fk_stagiaire_hebergement FOREIGN KEY (id_hebergement) REFERENCES hebergement (id_hebergement);

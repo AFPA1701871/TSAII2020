@@ -1,0 +1,17 @@
+Le programme crée un tableau avec les premiers carrés et les affiches
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int nb[6];
+    int i;
+    for (i=0;i<=5;i++)
+    {
+        nb[i]=i*i;
+        printf("%d |",nb[i]);
+    }
+    return 0;
+}

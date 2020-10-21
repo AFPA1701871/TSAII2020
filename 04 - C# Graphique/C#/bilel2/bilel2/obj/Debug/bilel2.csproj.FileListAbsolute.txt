@@ -1,0 +1,15 @@
+U:\59011-71-05\c# Graphique\C#\bilel2\bilel2\bin\Debug\bilel2.exe.config
+U:\59011-71-05\c# Graphique\C#\bilel2\bilel2\bin\Debug\bilel2.exe
+U:\59011-71-05\c# Graphique\C#\bilel2\bilel2\bin\Debug\bilel2.pdb
+U:\59011-71-05\c# Graphique\C#\bilel2\bilel2\obj\Debug\MainWindow.g.cs
+U:\59011-71-05\c# Graphique\C#\bilel2\bilel2\obj\Debug\App.g.cs
+U:\59011-71-05\c# Graphique\C#\bilel2\bilel2\obj\Debug\bilel2_MarkupCompile.cache
+U:\59011-71-05\c# Graphique\C#\bilel2\bilel2\obj\Debug\bilel2_MarkupCompile.lref
+U:\59011-71-05\c# Graphique\C#\bilel2\bilel2\obj\Debug\MainWindow.baml
+U:\59011-71-05\c# Graphique\C#\bilel2\bilel2\obj\Debug\bilel2.g.resources
+U:\59011-71-05\c# Graphique\C#\bilel2\bilel2\obj\Debug\bilel2.Properties.Resources.resources
+U:\59011-71-05\c# Graphique\C#\bilel2\bilel2\obj\Debug\bilel2.csproj.GenerateResource.cache
+U:\59011-71-05\c# Graphique\C#\bilel2\bilel2\obj\Debug\bilel2.csproj.CoreCompileInputs.cache
+U:\59011-71-05\c# Graphique\C#\bilel2\bilel2\obj\Debug\bilel2.exe
+U:\59011-71-05\c# Graphique\C#\bilel2\bilel2\obj\Debug\bilel2.pdb
+U:\59011-71-05\c# Graphique\C#\bilel2\bilel2\obj\Debug\bilel2.csprojAssemblyReference.cache
